@@ -26,7 +26,7 @@
             background-color: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 15px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -38,43 +38,42 @@
             max-width: 850px;
             width: 100%;
             background: var(--card-bg);
-            padding: 30px;
+            padding: 35px;
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.06);
             text-align: center;
             border: 1px solid rgba(255,255,255,0.8);
-            box-sizing: border-box;
         }
 
         h1 {
             color: var(--primary);
             font-weight: 700;
-            margin-bottom: 4px;
-            font-size: 26px;
+            margin-bottom: 8px;
+            font-size: 28px;
             letter-spacing: -0.5px;
         }
 
         .subtitle {
             color: #64748b;
-            margin-bottom: 25px;
-            font-size: 15px;
+            margin-bottom: 35px;
+            font-size: 16px;
             font-weight: 300;
         }
 
-        /* ส่วนแดชบอร์ดแสดงผลตัวเลข */
+        /* ส่วนแสดงผลตัวเลข (Display Dashboard) */
         .display-section {
             background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
             border-radius: 20px;
-            padding: 25px 20px;
-            margin-bottom: 25px;
+            padding: 35px 20px;
+            margin-bottom: 35px;
             box-shadow: inset 0 2px 8px rgba(0,0,0,0.02);
             border: 1px solid #e2e8f0;
         }
 
         .label-text {
-            font-size: 13px;
+            font-size: 14px;
             color: #64748b;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -82,20 +81,20 @@
 
         .standard-form {
             font-family: 'Chakra Petch', sans-serif;
-            font-size: 34px;
+            font-size: 36px;
             font-weight: 700;
             color: #334155;
             letter-spacing: 1px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             word-break: break-all;
         }
 
         .scientific-form {
             font-family: 'Chakra Petch', sans-serif;
-            font-size: 50px;
+            font-size: 52px;
             font-weight: 700;
             border-top: 2px dashed #cbd5e1;
-            padding-top: 20px;
+            padding-top: 25px;
             width: 90%;
             margin: 0 auto;
             display: flex;
@@ -107,38 +106,40 @@
         .highlight-a {
             color: var(--number-color);
             background: var(--number-bg);
-            padding: 4px 16px;
+            padding: 6px 18px;
             border-radius: 14px;
             display: inline-block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 6px rgba(2, 132, 199, 0.08);
         }
 
         .highlight-n {
             color: var(--exponent-color);
             background: var(--exponent-bg);
-            padding: 2px 12px;
+            padding: 4px 14px;
             border-radius: 10px;
-            font-size: 34px;
+            font-size: 36px;
             display: inline-block;
-            transform: translateY(-18px);
+            transform: translateY(-20px);
             box-shadow: 0 4px 6px rgba(220, 38, 38, 0.08);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .times-sign {
             color: #94a3b8;
             font-weight: 500;
-            font-size: 40px;
+            font-size: 42px;
         }
 
         .base-ten {
             color: #475569;
         }
 
-        /* ส่วนควบคุม */
+        /* ส่วนควบคุมดีไซน์ใหม่สไตล์มินิมอลแต่กดง่ายบน iPad */
         .control-section {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 25px;
             align-items: center;
         }
 
@@ -147,14 +148,14 @@
             align-items: center;
             gap: 20px;
             background: #fff7ed;
-            padding: 14px 28px;
+            padding: 16px 30px;
             border-radius: 18px;
             border: 2px solid #ffedd5;
             box-shadow: 0 4px 12px rgba(251, 146, 60, 0.05);
         }
 
         .control-title {
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 600;
             color: #c2410c;
         }
@@ -179,20 +180,39 @@
 
         .n-btn {
             font-size: 16px;
-            padding: 10px 22px;
+            padding: 12px 24px;
         }
         
         .n-btn.btn-up { background-color: #ef4444; }
-        .n-btn.btn-up:hover { background-color: #dc2626; }
+        .n-btn.btn-up:hover { background-color: #dc2626; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2); }
         .n-btn.btn-down { background-color: #2563eb; }
-        .n-btn.btn-down:hover { background-color: #1d4ed8; }
+        .n-btn.btn-down:hover { background-color: #1d4ed8; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
 
-        /* ส่วนกล่องกรอกข้อมูล */
+        .preset-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button.btn-secondary {
+            background: #ffffff;
+            color: #475569;
+            border: 2px solid #e2e8f0;
+            box-shadow: none;
+        }
+        button.btn-secondary:hover {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+            color: #1e293b;
+        }
+
+        /* ส่วนกล่องกรอกข้อมูลแบบแยกประเภท */
         .input-card {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 18px;
+            padding: 20px;
             width: 100%;
             max-width: 600px;
             box-sizing: border-box;
@@ -202,7 +222,7 @@
             font-size: 14px;
             font-weight: 600;
             color: #475569;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .input-group {
@@ -215,11 +235,11 @@
 
         .input-custom {
             font-family: 'Prompt', sans-serif;
-            padding: 10px 14px;
+            padding: 12px 16px;
             font-size: 16px;
             border: 2px solid #e2e8f0;
             border-radius: 12px;
-            width: 130px;
+            width: 140px;
             text-align: center;
             outline: none;
             transition: border-color 0.2s;
@@ -230,7 +250,6 @@
 
         .btn-submit {
             background: var(--primary);
-            padding: 10px 20px;
         }
         .btn-submit:hover {
             background: var(--primary-hover);
@@ -242,30 +261,27 @@
             font-size: 18px;
         }
 
-        /* กล่องกฎการเรียนรู้ด้านล่าง (ขยับขึ้นมาต่อจากกล่องกรอกโจทย์) */
+        /* กล่องกฎการเรียนรู้ด้านล่าง */
         .rule-box {
-            margin-top: 25px;
-            padding: 18px 22px;
+            margin-top: 40px;
+            padding: 20px 25px;
             background: #f8fafc;
             border-left: 5px solid var(--primary);
             border-radius: 8px 16px 16px 8px;
             text-align: left;
             box-shadow: 0 4px 12px rgba(0,0,0,0.01);
-            width: 100%;
-            max-width: 600px;
-            box-sizing: border-box;
         }
 
         .rule-box strong {
             color: var(--primary);
-            font-size: 15px;
+            font-size: 16px;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .rule-line {
-            font-size: 14px;
-            margin: 6px 0;
+            font-size: 15px;
+            margin: 8px 0;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -278,7 +294,7 @@
             padding: 2px 8px;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .badge-right {
@@ -287,7 +303,7 @@
             padding: 2px 8px;
             border-radius: 6px;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 13px;
         }
     </style>
 </head>
@@ -329,53 +345,73 @@
             </div>
         </div>
 
-        <div class="rule-box">
-            <strong>💡 ชวนนักเรียนสังเกตและสรุปกฎ:</strong>
-            <div class="rule-line">
-                <span class="badge-left">เมื่อกดปุ่มแดง</span> 
-                <span>ถ้าเลขชี้กำลัง (n) <b>เพิ่มขึ้น</b> ➔ ตัวเลขด้านหน้า (A) จะถูกบีบให้เลื่อนจุดไปทาง <b>ซ้าย (←)</b></span>
-            </div>
-            <div class="rule-line">
-                <span class="badge-right">เมื่อกดปุ่มน้ำเงิน</span> 
-                <span>ถ้าเลขชี้กำลัง (n) <b>ลดลง</b> ➔ ตัวเลขด้านหน้า (A) จะถูกขยายให้เลื่อนจุดไปทาง <b>ขวา (→)</b></span>
-            </div>
+        <div class="preset-buttons">
+            <button class="btn-secondary" onclick="loadPresetValue(3500, 3)">ค่าเริ่มต้น: 3,500</button>
+            <button class="btn-secondary" onclick="loadPresetValue(9300000, 6)">ค่าเริ่มต้น: 9,300,000</button>
+            <button class="btn-secondary" onclick="loadPresetValue(0.00025, -4)">ค่าเริ่มต้น: 0.00025</button>
         </div>
+    </div>
 
+    <div class="rule-box">
+        <strong>💡 ชวนนักเรียนสังเกตและสรุปกฎ:</strong>
+        <div class="rule-line">
+            <span class="badge-left">เมื่อกดปุ่มแดง</span> 
+            <span>ถ้าเลขชี้กำลัง (n) <b>เพิ่มขึ้น</b> ➔ ตัวเลขด้านหน้า (A) จะถูกบีบให้เลื่อนจุดไปทาง <b>ซ้าย (←)</b></span>
+        </div>
+        <div class="rule-line">
+            <span class="badge-right">เมื่อกดปุ่มน้ำเงิน</span> 
+            <span>ถ้าเลขชี้กำลัง (n) <b>ลดลง</b> ➔ ตัวเลขด้านหน้า (A) จะถูกขยายให้เลื่อนจุดไปทาง <b>ขวา (→)</b></span>
+        </div>
     </div>
 </div>
 
 <script>
+    // ตัวแปรเก็บค่าแกนหลัก
     let baseValue = 3500;
     let currentExponent = 3;
 
     function updateDisplay() {
+        // แสดงตัวเลขแท้จริงด้านบนแบบใส่คอมมาแยกหลักให้สวยงาม
         document.getElementById('standardDisplay').innerText = baseValue.toLocaleString(undefined, {maximumFractionDigits: 15});
 
+        // คำนวณหาค่า A บนหน้าจอจาก baseValue / 10^n
         let currentA = baseValue / Math.pow(10, currentExponent);
+        
+        // แก้ไขทศนิยมเศษซ้อนของระบบคอมพิวเตอร์
         let formattedA = Number(currentA.toFixed(12)).toString();
 
         document.getElementById('weightDisplay').innerText = formattedA;
         document.getElementById('exponentDisplay').innerText = currentExponent;
     }
 
+    // ปรับเปลี่ยนค่า n โดยการกดปุ่ม
     function changeExponent(amount) {
         currentExponent += amount;
         updateDisplay();
     }
 
+    // โหลดโจทย์ด่วนสำเร็จรูป
+    function loadPresetValue(value, exp) {
+        baseValue = value;
+        currentExponent = exp;
+        updateDisplay();
+    }
+
+    // ฟังก์ชันประมวลผลเมื่อคุณครูตั้งโจทย์ด้วยระบบสัญกรณ์ (A x 10^n)
     function setupScientificInput() {
         let inputA = parseFloat(document.getElementById('inputA').value);
         let inputN = parseInt(document.getElementById('inputN').value);
 
         if (!isNaN(inputA) && !isNaN(inputN)) {
+            // คำนวณหาค่าจริงสุทธิเพื่อล็อกไว้เป็นฐานข้อมูลหลัก: Value = A * 10^n
             baseValue = inputA * Math.pow(10, inputN);
             currentExponent = inputN;
             updateDisplay();
         }
     }
 
-    // เริ่มต้นแอปพลิเคชัน
-    setupScientificInput();
+    // เรียกใช้งานครั้งแรกตอนโหลดหน้าเว็บ
+    loadPresetValue(3500, 3);
 </script>
 
 </body>
